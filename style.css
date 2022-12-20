@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    background: #fff;
+}
+
+.box {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    height: 70%;
+    background: linear-gradient(0deg, #fc466b, #850000);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    z-index: 1;
+    transform: translateY(20px);
+}
+
+.box .container {
+    position: relative;
+    margin: auto;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .container .texto {
+    position: relative;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transform: translateY(10%);
+}
+
+.box .container .texto h2 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.box .container .texto h3 {
+    color: #fff;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.box .container .texto p {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.box .container .texto .textoCuerpo {
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+.contraste {
+    position: relative;
+    background: #fff;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    z-index: 3;
+    clip-path: polygon(51% 31%, 83% 27%, 100% 24%, 100% 100%, 48% 100%, 32% 100%, 0 100%, 0 23%, 15% 26%);
+}
+
+.copo-nieve {
+    position: absolute;
+    /* para poder animar el copo de nieve */
+    top: 0;
+    /* para que comience desde la parte superior de la pantalla */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* para que tenga forma de esfera */
+    background-color: white;
+    /* para que sea blanco */
+    animation-name: caida;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    z-index: 2;
+    /* crea una sombra blanca y luminosa alrededor del elemento */
+}
+
+@keyframes caida {
+    from {
+        top: 0;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    to {
+        top: 100%;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+}
+
+.estrellita {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation-name: mover;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mover {
+    0% {
+        left: 0;
+        top: 20%;
+    }
+
+    15% {
+        top: 10%;
+    }
+
+    50% {
+        top: 5%;
+    }
+
+    85% {
+        top: 10%;
+    }
+
+    100% {
+        left: 95%;
+        top: 15%;
+    }
+}
+
+.titulo {
+    position: relative;
+    /* para poder animar el elemento */
+    font-size: 2em;
+    /* tamaño de la fuente */
+    text-align: center;
+    /* para centrar el texto */
+    animation-name: salto;
+    animation-duration: 1s;
+    /* duración de la animación en segundos */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* para que la animación se repita indefinidamente */
+}
+
+@keyframes salto {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -10px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
