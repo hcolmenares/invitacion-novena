@@ -177,3 +177,25 @@ body {
         top: 0;
     }
 }
+
+.contentRow
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgBox
+{
+    width: 50%;
+}
+
+.imgBox img 
+{
+    z-index: 2;
+}
+
+.textBox
+{
+    width: 50%;
+}
